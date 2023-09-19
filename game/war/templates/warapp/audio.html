@@ -1,0 +1,11 @@
+{% extends 'warapp/base.html' %}
+
+{% block content %}
+    <h1>Audio</h1>
+    {% for audio in audio_list %}
+        <p>{{ audio.title }}</p>
+        <audio controls>
+            <source src="{{ audio.audio.url }}">
+        </audio>
+    {% endfor %}
+{% endblock content %}

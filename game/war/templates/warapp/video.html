@@ -1,0 +1,12 @@
+{% extends 'warapp/base.html' %}
+
+{% block content %}
+  <h1>Video Page</h1>
+  {% for video in video_list %}
+    <p>{{ video.title }}</p>
+    <video controls style="wight: 500px;
+                            height:800px">
+      <source src="{{ video.video.url }}" >
+    </video>
+  {% endfor %}
+{% endblock content %}

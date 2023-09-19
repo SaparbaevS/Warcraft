@@ -1,0 +1,9 @@
+{% extends 'warapp/base.html' %}
+
+{% block content %}
+    <h1>Photo</h1>
+    {% for photo in picture_list %}
+        <p>{{ photo.title }}</p>
+        <p><img src="{{ photo.image.url }}" alt=""></p>
+    {% endfor %}
+{% endblock content %}
